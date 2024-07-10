@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<title>Document</title>
+</head>
+
+<body>
+    <form action = "{{ url_for('get_data__show_chart')}}" method = "post" > 
+        <div > 
+           <table > 
+            <tr > 
+               <td > 
+                    <input type = "text" placeholder = "Title of pie chart" name = "title" > </tr > 
+                </td > 
+                <td > 
+                    <input type = "height" placeholder="height" name="ht" ></tr> 
+                </td > 
+                <td > 
+                    <input type = "width" placeholder="width" name="wt" ></tr> 
+                </td > 
+            </tr > 
+            <tr > 
+                <th > Daily Activities</th> 
+                <th > Time in Hours</th> 
+            </tr > 
+            <tr > 
+                <td > <input type="text" name="act1" placeholder="Activity 1"></td> 
+                <td > <input type="number" name="t1" placeholder="Time 1"></td> 
+            </tr > 
+            <tr > 
+                <td > <input type="text"  name="act2" placeholder="Activity 2"></td> 
+                <td > <input type="number" name="t2" placeholder="Time 2"></td> 
+            </tr > 
+            <tr > 
+                <td > <input type="text" name="act3" placeholder="Activity 3"></td> 
+                <td > <input type="number" name="t3" placeholder="Time 3"></td> 
+            </tr > 
+        </table > 
+        </div > 
+        <button type = "submit" style="display:block;">Submit</button> 
+    </form > 
+</body>
+</html>

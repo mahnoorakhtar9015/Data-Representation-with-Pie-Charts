@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html> 
+   <head>
+      <title>Data Representation using Pie Charts</title>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript">
+         google.charts.load('current', {'packages':['corechart']});
+         google.charts.setOnLoadCallback(drawCharts);
+
+         function drawCharts() {
+             var data = new google.visualization.DataTable();
+             data.addColumn('string', 'Daily Activity');
+             data.addColumn('number', 'Hours');
+             data.addRows([
+                 ['Activity 1', 5], 
+                 ['Activity 2', 3], 
+                 ['Activity 3', 2]
+             ]);
+
+             var options_1 = {
+                 title: 'Simple Chart',
+                 width: 400,
+                 height: 300
+             };
+
+             var options_2 = {
+                 title: '3D Chart',
+                 width: 400,
+                 height: 300,
+                 is3D: true
+             };
+
+             var options_3 = {
+                 title: 'Donut Chart',
+                 width: 400,
+                 height: 300,
+                 pieHole: 0.4
+             };
+
+             var simple_chart = new google.visualization.PieChart(document.getElementById('simple_chart'));
+             simple_chart.draw(data, options_1);
+
+             var _3dchart = new google.visualization.PieChart(document.getElementById('3dchart'));
+             _3dchart.draw(data, options_2);
+
+             var donut_chart = new google.visualization.PieChart(document.getElementById('donut_chart'));
+             donut_chart.draw(data, options_3);
+         }
+      </script>
+   </head>
+   <body>
+      <h1>Data Representation using Pie Charts</h1>
+      <div style="border: 1px solid black;">
+         <div id="simple_chart"></div>
+         <div id="3dchart"></div>
+         <div id="donut_chart"></div>
+      </div>
+   </body>
+</html>
